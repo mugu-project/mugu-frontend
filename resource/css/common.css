@@ -1,0 +1,22 @@
+/* Fonts ===============================================*/
+@import url('https://webfontworld.github.io/SCoreDream/SCoreDream.css');
+
+/* Normalize ===============================================*/
+@import url(./reset.css);
+@import url(./base.css);
+
+/* Elements ===============================================*/
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./main.css);
+
+/* MEDIA QUERY START ===============================================*/
+@media screen and (max-width:1200px) {
+}
+@media screen and (max-width:1024px) {
+}
+@media screen and (max-width:768px) {
+}
+@media screen and (max-width:500px) {
+}
+/* MEDIA QUERY END ===============================================*/

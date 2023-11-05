@@ -1,0 +1,331 @@
+/* Container ===============================================*/
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid var(--borderColor-300);
+    background: #fff;
+}
+.h-inner {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.h-left {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+}
+.h-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+/* Logo ===============================================*/
+.h-logo {
+    width: 100px;
+}
+.h-logo a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.h-logo a img {
+    width: 100%;
+}
+/* SearchBox ===============================================*/
+.h-searchBox {
+    position: relative;
+    width: 580px;
+    height: 45px;
+}
+.h-search__bar {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10rem;
+    background: var(--primaryColor);
+    border: none;
+    padding: 0 6rem 0 2rem;
+    font-weight: 500;
+    color: var(--titleColor);
+}
+.h-search__bar:focus {
+    outline-color: var(--mainColor);
+}
+.h-search__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 2rem;
+    font-size: 2rem;
+    color: var(--mainColor);
+}
+/* Gnb ===============================================*/
+.h-gnb__items {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.h-gnb__items > li > a {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--titleColor);
+}
+/* Profile ===============================================*/
+.h-profile__box {
+    position: relative;
+}
+.h-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.h-profile__img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: no-repeat center/cover;
+    background-image: url(../images/common/profile_default.png);
+    border-radius: 100%;
+}
+.h-profile i {
+    color: var(--mainColor);
+    transition: .3s;
+}
+.h-profile.active i {
+    transform: rotate(180deg);
+}
+.h-profile__menu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.6rem;
+    width: 160px;
+    background: #fff;
+    box-shadow: var(--box-shadow__A);
+    border-radius: 2rem;
+}
+.h-profile__menu > li {
+    margin-bottom: 0.4rem;
+}
+.h-profile__menu > li:last-child {
+    margin-bottom: 0;
+}
+.h-profile__menu > li > a {
+    font-size: 1.4rem;
+}
+.h-profile__menu > li > a:hover {
+    font-weight: 500;
+    color: var(--mainColor);
+}
+/* Mobile ===============================================*/
+.h-mobile {
+    display: none;
+}
+.h-mobile__box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.h-mobile__menu-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+}
+/* Btn */
+.h-mobile__btn--open {
+    font-size: 2.4rem;
+    color: var(--mainColor);
+}
+.h-mobile__btn--close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2.4rem;
+    color: var(--mainColor);
+    z-index: 1;
+}
+/* Logo */
+.mobile-logo {
+    position: absolute;
+    left: 2rem;
+    top: 2.2rem;
+}
+/* Menu:default */
+.h-mobile__menu > li > a {
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--mainColor);
+    transition: .3s;
+}
+.h-mobile__menu > li > a:hover {
+    color: #fff;
+    background: var(--mainColor);
+}
+/* Menu:Profile */
+.h-mobile__profile-gnb > li {
+    position: relative;
+}
+.h-mobile__profile-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 2rem;
+}
+.h-mobile__profile-box i {
+    font-size: 2.4rem;
+    color: var(--mainColor);
+    transition: .3s;
+}
+.h-mobile__profile-box.active i {
+    transform: rotate(180deg);
+}
+.h-mobile__profile {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.h-mobile__profile--img {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: url(../images/common/profile_default.png) no-repeat center/cover;
+}
+.h-mobile__profile--name {
+    font-size: 2rem;
+    color: var(--mainColor);
+}
+.h-mobile__profile-lnb > li > a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+}
+/* Menu:Profile */
+.h-mobile__sign {
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+}
+.h-mobile__sign > li > a {
+    font-weight: 500;
+}
+/* MEDIA QUERY START ===============================================*/
+@media screen and (max-width:1320px) {
+    /* Profile ===============================================*/
+    .h-profile__menu {
+        left: -1rem;
+    }
+}
+@media screen and (max-width:1200px) {
+    /* Container ===============================================*/
+    .h-inner {
+        padding: 0 2rem;
+    }
+    .h-left {
+        gap: 4rem;
+    }
+    .h-right {
+        gap: 4rem;
+    }
+    /* Gnb ===============================================*/
+    .h-gnb__items > li > a {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width:1024px) {
+    /* SearchBox ===============================================*/
+    .h-searchBox {
+        width: 39.0625vw;/*400*/
+    }
+}
+@media screen and (max-width:768px) {
+    /* SearchBox ===============================================*/
+    .h-searchBox {
+        width: 52.08333333333333vw;/*400*/
+    }
+    /* Gnb ===============================================*/
+    .h-gnb__items {
+        display: none;
+    }
+    /* Profile ===============================================*/
+    .h-profile__box {
+        display: none;
+    }
+    /* Mobile ===============================================*/
+    .h-mobile {
+        display: block;
+    }
+}
+@media screen and (max-width:500px) {
+    /* Container ===============================================*/
+    #header {
+        height: 64px;
+    }
+    /* Logo ===============================================*/
+    .h-logo {
+        width: 72px;
+    }
+    /* SearchBox ===============================================*/
+    .h-searchBox {
+        display: none;
+    }
+    /* Mobile ===============================================*/
+    .h-mobile__btn {
+        font-size: 2rem;
+    }
+    .h-mobile__btn--close {
+        top: 1.2rem;
+        right: 2.2rem;
+    }
+    .mobile-logo {
+        top: 2rem;
+    }
+    .h-mobile__menu-box {
+        padding-top: 6.4rem;
+    }
+    .h-mobile__profile {
+        gap: 1rem;
+    }
+    .h-mobile__profile--img {
+        width: 36px;
+        height: 36px;
+    }
+    .h-mobile__profile--name {
+        font-size: 1.6rem;
+    }
+    .h-mobile__profile-lnb > li > a {
+        font-size: 1.4rem;
+    }
+    .h-mobile__menu > li > a {
+        font-size: 1.6rem;
+    }
+    .h-mobile__sign > li > a {
+        font-size: 1.4rem;
+    }
+}
+/* MEDIA QUERY END ===============================================*/
